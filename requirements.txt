@@ -1,0 +1,8 @@
+pytube-fix
+eyed3
+requests
+numpy
+cv2-python
+pydub
+mutagen
+ytmusicapi
