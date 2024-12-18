@@ -360,8 +360,8 @@ SongNum     : str = '0'
 
 def DownoadURL(
 url : str,
-maxartistthreads : int = 3,
-path : str = './Music/[Artist]/[Album]/[SongNumber] - [SongName]'
+path : str = './Music/[Artist]/[Album]/[SongNumber] - [SongName]',
+maxartistthreads : int = 3
 ):
 	"""MusicDL.DownloadURL(URL, MaxArtistThreads, Path)
 url = the url of the targeted content
