@@ -353,6 +353,57 @@ SongNum     : str = '0'
 
 
 
+#Basic Run
+
+
+
+
+def DownoadURL(
+url : str,
+maxartistthreads : int = 3,
+path : str = './Music/[Artist]/[Album]/[SongNumber] - [SongName]'
+):
+	"""MusicDL.DownloadURL(URL, MaxArtistThreads, Path)
+url = the url of the targeted content
+maxartistthreads = the number of threads that the artist dl can use to download the full discography of the artist
+path = the path to where you want the music downloaded
+you can use multiple path variables to define how you want the music saved such as:
+[Artist] - The name of the artist
+[Album] - the name of the album
+[SongNum] - the number of the song in the album
+[SongName] - the name of the song
+default path is './Music/[Artist]/[Album]/[SongNum] - [SongName]')
+Remember you do not the file extention is automaticly added, you do not need to add .mp3 to the end of the path.
+"""
+	if "/watch" in url.lower():
+        WatchID = url.split('/watch?v=')[1].split('?')[0]
+
+        YoutubeDL(
+            WatchID,
+            Path
+        )
+
+    elif "/playlist" in url.lower():
+
+        PlaylistID = url.split('/playlist?list=')[1].split('?')[0]
+
+        PlaylistDL(
+            PlaylistID,
+            Path
+        )
+
+
+    elif "/channel/" in url.lower():
+        ArtistID = url.split('/')[-1].split('?')[0]
+
+        ArtistDL(
+            ArtistID,
+            Path
+	    ThreadCap=maxartistthreads
+        )
+
+
+
 #Extras
 def InsertPathData(
     Path     : str,
