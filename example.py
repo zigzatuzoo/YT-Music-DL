@@ -21,10 +21,10 @@ artists = [
     
     ]
 
-path = '/mnt/Music/Opus-Music/[Artist]/[Album]/[SongNum] - [SongName]'
+path = '~/Music/[Artist]/[Album]/[SongNum] - [SongName]'
 
 for a in artists:
-    MusicDL.ArtistDL(a,path).Download()
+    MusicDL.ArtistDL(path,a).Download()
 
 
 

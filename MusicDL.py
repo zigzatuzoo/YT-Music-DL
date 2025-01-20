@@ -134,8 +134,8 @@ class AlbumDL:
 
 class ArtistDL:
     def __init__(self,
-                 ChannelID : str,
                  Path : str = '~/Music/[Artist]/[Album]/[SongNum] - [SongName]',
+                 ChannelID : str = "UCwZEU0wAwIyZb4x5G_KJp2w",
                  API : YTMusic | None = None
                  ):
         self.Path = Path
