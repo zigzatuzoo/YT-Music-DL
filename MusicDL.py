@@ -106,7 +106,7 @@ class AlbumDL:
                 
                 print('Converting with ffmpeg ...')
                 convert_webm_to_opus(Path+'.webm',Path+'.opus')
-                #system(f'rm "{Path}.webm"')
+                system(f'rm "{Path}.webm"')
                 
                 print('Tagging ...')
                 musicfile = music_tag.load_file(Path+'.opus')
