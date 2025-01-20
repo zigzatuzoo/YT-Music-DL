@@ -1,8 +1,5 @@
-pytube-fix
-eyed3
+ytmusicapi >= 1.9.1
+yt-dlp >= 2025.1.12
+music-tag
 requests
-numpy
-cv2-python
-pydub
-mutagen
-ytmusicapi
+pillow
