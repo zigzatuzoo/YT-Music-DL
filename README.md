@@ -1,4 +1,3 @@
 # YT-Music-DL
 
-
-Rewriting it ... might be a minute
+I'll get around to this eventually ... if you want an example just look at example.py
